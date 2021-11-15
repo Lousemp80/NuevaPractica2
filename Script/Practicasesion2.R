@@ -67,7 +67,7 @@ curso %>%
 
 library(electorAr)
 
-elecciones <- show_available_elections(source = "data", viewer = T)
+elecciones <- show_available_elections(source = "data")
 
 class(elecciones)
 
@@ -130,4 +130,12 @@ gral2015 %>%  # > TIDY
   filter(nombre_lista == 'ALIANZA FRENTE DE IZQUIERDA Y DE LOS TRABAJADORES') %>% 
   ungroup() %>% 
   slice_max(votos)
+
+### Porque me salia antes una pagina de internet y no un data.frame?
+### eso era porque tenia lasiguiente función elecciones <- show_available_elections(source = "data", viewer = T)
+### por eso en objeto si llamaba elecciones me salia lista observaciones 8 y no las 426 observaciones
+
+
+#### Atajo para reinciar sesión seguido   CTRL + SHIFT + F10 , que fue ejecutado y realmente se puso en blanco el environment
+
 
